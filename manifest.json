@@ -1,0 +1,79 @@
+{
+  "name": "BoomBrawl",
+  "short_name": "BoomBrawl",
+  "description": "A multiplayer bombing game inspired by BombSquad",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#2c3e50",
+  "theme_color": "#e74c3c",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
+// sw.js (Service Worker for PWA)
+const CACHE_NAME = 'boombrawl-v1';
+const ASSETS = [
+  '/',
+  '/index.html',
+  '/style.css',
+  '/game.js',
+  '/assets/player.png',
+  '/assets/bomb.png',
+  '/assets/explosion.png',
+  '/assets/background.png',
+  '/assets/icon-192.png',
+  '/assets/icon-512.png',
+  'https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js'
+];
+
+// Install service worker
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(ASSETS))
+      .then(() => self.skipWaiting())
+  );
+});
+
+// Activate service worker
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.filter(name => name !== CACHE_NAME)
+          .map(name => caches.delete(name))
+      );
+    }).then(() => self.clients.claim())
+  );
+});
+
+// Fetch resources
+self.addEventListener('fetch', event => {
+  // Skip socket.io requests
+  if (event.request.url.includes('socket.io')) {
+    return;
+  }
+  
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => {
+        return response || fetch(event.request)
+          .then(fetchResponse => {
+            return caches.open(CACHE_NAME).then(cache => {
+              cache.put(event.request, fetchResponse.clone());
+              return fetchResponse;
+            });
+          });
+      })
+  );
+});
