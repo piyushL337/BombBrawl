@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoomBrawl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4285f4">
+</head>
+<body>
+    <div id="game-container">
+        <div id="login-screen" class="screen">
+            <h1>BoomBrawl</h1>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username">
+                <button id="play-button">Play</button>
+            </div>
+        </div>
+        
+        <div id="lobby-screen" class="screen hidden">
+            <h2>Game Lobby</h2>
+            <div id="rooms-list"></div>
+            <button id="create-room">Create Room</button>
+            <button id="refresh-rooms">Refresh</button>
+        </div>
+        
+        <div id="game-screen" class="screen hidden">
+            <canvas id="game-canvas"></canvas>
+            <div id="game-ui">
+                <div id="players-list"></div>
+                <div id="chat-box">
+                    <div id="messages"></div>
+                    <input type="text" id="chat-input" placeholder="Type message...">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+    <script src="game.js"></script>
+    <script>
+        // Register service worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+    </script>
+</body>
+</html>
