@@ -60,10 +60,11 @@ This repository contains comprehensive documentation for developing a profession
 ### Core Documentation Files
 
 1. **[DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md)** - Complete phase-wise development plan
-   - 19 detailed development phases
-   - Timeline: 14-16 months
+   - 20 detailed development phases
+   - Timeline: 15-17 months
    - Resource requirements and budget
    - All BombSquad features mapped out
+   - Python backend server phase (like BombSquad)
    - Post-launch roadmap
 
 2. **[ANDROID_PROJECT_STRUCTURE.md](./ANDROID_PROJECT_STRUCTURE.md)** - Unity Android project structure
@@ -76,6 +77,7 @@ This repository contains comprehensive documentation for developing a profession
 3. **[TECHNICAL_ARCHITECTURE.md](./TECHNICAL_ARCHITECTURE.md)** - Technical architecture and implementation
    - System architecture overview
    - Core component implementations
+   - Python backend server (like BombSquad)
    - Network synchronization
    - Performance optimization
    - Security considerations
@@ -87,7 +89,8 @@ This repository contains comprehensive documentation for developing a profession
 - Alternative: Unreal Engine 5, Godot
 
 ### Programming
-- **C#** for Unity
+- **C#** for Unity client
+- **Python** for custom backend server (like BombSquad)
 - **Photon Unity Networking (PUN2)** for multiplayer
 - **Firebase** for backend services
 
@@ -99,6 +102,7 @@ This repository contains comprehensive documentation for developing a profession
 - Unity Ads & IAP - Monetization
 
 ### Backend Services
+- **Python Server** - Custom backend (FastAPI, Redis, PostgreSQL) - Like BombSquad
 - **Firebase** - Authentication, Database, Storage, Analytics
 - **Photon Cloud** - Multiplayer networking
 - **Google Play Services** - Achievements, Leaderboards
@@ -138,9 +142,9 @@ This repository contains comprehensive documentation for developing a profession
 ## 💰 Estimated Budget
 
 - **Total Development**: $600,000 - $1,000,000
-- **Team Size**: 15-18 people
-- **Timeline**: 14-16 months to launch
-- **Ongoing Costs**: $50,000-100,000/year (servers, marketing, live ops)
+- **Team Size**: 15-18 people (includes Python backend developer)
+- **Timeline**: 15-17 months to launch
+- **Ongoing Costs**: $50,000-100,000/year (Python servers, Firebase, marketing, live ops)
 
 ## 🎯 Key Performance Indicators (KPIs)
 
@@ -172,7 +176,7 @@ This repository currently contains:
 The current codebase is a **web-based prototype** that demonstrates basic concepts:
 - `index.html` - Game UI structure
 - `game.js` - Client-side game logic
-- `server.js` - Node.js server for multiplayer
+- `server.js` - Node.js server for web prototype (will use Python for production like BombSquad)
 - `style.css` - Visual styling
 - `manifest.json` - PWA configuration
 
@@ -287,8 +291,10 @@ This project documentation is provided for educational and development planning 
 - Mirror Networking: [mirror-networking.com](https://mirror-networking.com)
 
 ### Backend Services
+- Python FastAPI: [fastapi.tiangolo.com](https://fastapi.tiangolo.com)
 - Firebase: [firebase.google.com](https://firebase.google.com)
 - PlayFab: [playfab.com](https://playfab.com)
+- Redis: [redis.io](https://redis.io)
 
 ## 📞 Support
 
@@ -312,11 +318,11 @@ For questions about the development plan or architecture:
 Month 1-2:  Foundation (Project setup, core mechanics)
 Month 3-4:  Gameplay (Game modes, bombs, power-ups)
 Month 5-8:  Multiplayer & Content (Maps, characters, networking)
-Month 9-11: Systems (Progression, social, monetization)
-Month 12-13: Polish (UI/UX, audio, optimization)
-Month 14:   Testing & QA
-Month 15:   Launch Preparation
-Month 16+:  Launch & Live Operations
+Month 9-11: Systems (Progression, social, Python backend)
+Month 12-14: Polish (UI/UX, audio, optimization)
+Month 15:   Testing & QA
+Month 16:   Launch Preparation
+Month 17+:  Launch & Live Operations
 ```
 
 ---

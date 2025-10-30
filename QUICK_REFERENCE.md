@@ -86,17 +86,18 @@ git push origin feature/your-feature-name
 | 8 | Characters | 3 weeks | 10+ characters, customization |
 | 9 | Progression | 4 weeks | XP, achievements, currency, unlocks |
 | 10 | Social | 3 weeks | Friends, parties, chat, clans |
-| 11 | AI & Single-player | 3 weeks | AI bots, campaign, practice mode |
-| 12 | UI/UX Polish | 3 weeks | Complete menu system, HUD, notifications |
-| 13 | Audio/Visual | 3 weeks | Music, SFX, VFX, animations |
-| 14 | Monetization | 2 weeks | IAP, ads, shop |
-| 15 | Optimization | 3 weeks | Performance, mobile optimization |
-| 16 | Localization | 2 weeks | 10+ languages, accessibility |
-| 17 | Testing & QA | 4 weeks | Bug fixes, balance, user testing |
-| 18 | Launch Prep | 2 weeks | Store listing, marketing, soft launch |
-| 19 | Launch & Support | Ongoing | Global launch, live ops |
+| 11 | Python Backend | 3 weeks | Custom server (FastAPI, Redis) like BombSquad |
+| 12 | AI & Single-player | 3 weeks | AI bots, campaign, practice mode |
+| 13 | UI/UX Polish | 3 weeks | Complete menu system, HUD, notifications |
+| 14 | Audio/Visual | 3 weeks | Music, SFX, VFX, animations |
+| 15 | Monetization | 2 weeks | IAP, ads, shop |
+| 16 | Optimization | 3 weeks | Performance, mobile optimization |
+| 17 | Localization | 2 weeks | 10+ languages, accessibility |
+| 18 | Testing & QA | 4 weeks | Bug fixes, balance, user testing |
+| 19 | Launch Prep | 2 weeks | Store listing, marketing, soft launch |
+| 20 | Launch & Support | Ongoing | Global launch, live ops |
 
-**Total**: 14-16 months
+**Total**: 15-17 months
 
 ---
 
@@ -104,13 +105,14 @@ git push origin feature/your-feature-name
 
 ### Core
 - **Engine**: Unity 2021.3 LTS+
-- **Language**: C#
+- **Language**: C# (Unity), Python (Backend Server)
 - **Build Target**: Android (API 24-33)
 - **Graphics**: Universal Render Pipeline (URP)
 
 ### Networking
 - **Multiplayer**: Photon Unity Networking (PUN2)
-- **Backend**: Firebase
+- **Custom Backend**: Python (FastAPI + Redis + PostgreSQL) - Like BombSquad
+- **Backend Services**: Firebase
 - **Real-time**: Firebase Realtime Database
 
 ### Services

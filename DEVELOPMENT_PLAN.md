@@ -11,7 +11,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - **3D Graphics**: Unity Rendering Pipeline / Unreal Engine Renderer
 - **Physics Engine**: Unity Physics / Box2D / Bullet Physics
 - **Networking**: Photon Unity Networking (PUN2) / Mirror / Unity Netcode for GameObjects
-- **Backend Services**: Firebase / PlayFab / Custom Node.js backend
+- **Backend Services**: Firebase / PlayFab / Custom Python backend (like BombSquad)
 - **Authentication**: Firebase Auth / Google Play Games Services
 - **Database**: Firebase Realtime Database / Cloud Firestore
 - **Analytics**: Firebase Analytics / Unity Analytics
@@ -617,7 +617,68 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Clan system
 - Social sharing features
 
-### Phase 11: AI and Single-player Content (Weeks 35-37)
+### Phase 11: Python Backend Server (BombSquad-Style) (Weeks 35-37)
+**Duration**: 3 weeks
+
+#### Tasks:
+1. **Server Setup**
+   - Set up Python development environment
+   - Install FastAPI, Redis, PostgreSQL
+   - Configure Docker for deployment
+   - Set up development and production environments
+
+2. **Authentication API**
+   - Implement JWT-based authentication
+   - User registration endpoint
+   - Login endpoint
+   - Token verification
+   - Password hashing and security
+
+3. **Leaderboard System**
+   - Global leaderboard API
+   - Weekly/Monthly leaderboards
+   - Player ranking system
+   - Score update endpoints
+   - Redis-based caching for performance
+
+4. **Matchmaking Service**
+   - WebSocket-based matchmaking
+   - Skill-based matching algorithm
+   - Queue management
+   - Match creation and notifications
+   - Regional server selection
+
+5. **Statistics and Analytics**
+   - Match history tracking
+   - Player statistics API
+   - Server monitoring endpoints
+   - Performance metrics
+   - Data aggregation for insights
+
+6. **Admin Dashboard**
+   - Admin authentication
+   - Player management
+   - Server statistics view
+   - Ban/unban functionality
+   - Match monitoring
+
+7. **Unity Integration**
+   - HTTP client for Unity
+   - WebSocket client implementation
+   - Authentication flow in Unity
+   - Leaderboard UI integration
+   - Error handling and retry logic
+
+**Deliverables**:
+- Fully functional Python backend server (like BombSquad)
+- REST API and WebSocket endpoints
+- Leaderboard system with Redis caching
+- Matchmaking service
+- Unity integration complete
+- Docker deployment configuration
+- Admin dashboard for management
+
+### Phase 12: AI and Single-player Content (Weeks 38-40)
 **Duration**: 3 weeks
 
 #### Tasks:
@@ -651,7 +712,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Practice mode
 - Bot fill system for multiplayer
 
-### Phase 12: UI/UX Polish and Menus (Weeks 38-40)
+### Phase 13: UI/UX Polish and Menus (Weeks 41-43)
 **Duration**: 3 weeks
 
 #### Tasks:
@@ -708,7 +769,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Notification system
 - Animated transitions
 
-### Phase 13: Audio and Visual Effects (Weeks 41-43)
+### Phase 14: Audio and Visual Effects (Weeks 44-46)
 **Duration**: 3 weeks
 
 #### Tasks:
@@ -754,7 +815,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Optimized particle systems
 - Smooth animations
 
-### Phase 14: Monetization Implementation (Weeks 44-45)
+### Phase 15: Monetization Implementation (Weeks 47-48)
 **Duration**: 2 weeks
 
 #### Tasks:
@@ -801,7 +862,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Balanced economy
 - Monetization analytics
 
-### Phase 15: Optimization and Performance (Weeks 46-48)
+### Phase 16: Optimization and Performance (Weeks 49-51)
 **Duration**: 3 weeks
 
 #### Tasks:
@@ -847,7 +908,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Device compatibility report
 - Performance benchmarks
 
-### Phase 16: Localization and Accessibility (Weeks 49-50)
+### Phase 17: Localization and Accessibility (Weeks 52-53)
 **Duration**: 2 weeks
 
 #### Tasks:
@@ -888,7 +949,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Comprehensive tutorial system
 - Localization testing completed
 
-### Phase 17: Testing and Quality Assurance (Weeks 51-54)
+### Phase 18: Testing and Quality Assurance (Weeks 54-57)
 **Duration**: 4 weeks
 
 #### Tasks:
@@ -946,7 +1007,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Security audit passed
 - Compliance requirements met
 
-### Phase 18: Launch Preparation (Weeks 55-56)
+### Phase 19: Launch Preparation (Weeks 58-59)
 **Duration**: 2 weeks
 
 #### Tasks:
@@ -1002,7 +1063,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Support infrastructure in place
 - Soft launch completed successfully
 
-### Phase 19: Launch and Post-Launch (Week 57+)
+### Phase 20: Launch and Post-Launch (Week 60+)
 **Duration**: Ongoing
 
 #### Tasks:
@@ -1057,7 +1118,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 
 ## Post-Launch Roadmap (Future Phases)
 
-### Phase 20: Advanced Features (Months 3-6)
+### Phase 21: Advanced Features (Months 3-6)
 - Clan wars and tournaments
 - Ranked competitive mode
 - Spectator mode improvements
@@ -1065,8 +1126,9 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - Custom game modes editor
 - Cross-platform play (iOS, PC)
 - Controller support enhancements
+- Python server scaling and optimization
 
-### Phase 21: Major Content Expansion (Months 6-12)
+### Phase 22: Major Content Expansion (Months 6-12)
 - New game mode categories
 - Map editor for user-generated content
 - Seasonal events (Halloween, Christmas, etc.)
@@ -1075,7 +1137,7 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - New weapon types beyond bombs
 - Expanded co-op campaigns
 
-### Phase 22: Esports and Competitive (Year 2)
+### Phase 23: Esports and Competitive (Year 2)
 - Ranked seasons
 - Official tournaments
 - Spectator mode with commentary
@@ -1096,18 +1158,18 @@ BombBrawl is a comprehensive multiplayer bombing game inspired by BombSquad, des
 - **Animator**: 1 (character animations, VFX)
 - **Sound Designer**: 1 (music, sound effects)
 - **QA Testers**: 2-3 (testing, bug reporting)
-- **Backend Developer**: 1 (server, database, APIs)
+- **Backend Developer (Python)**: 1 (Python server, database, APIs like BombSquad)
 - **DevOps Engineer**: 1 (CI/CD, deployment, infrastructure)
 - **Marketing Specialist**: 1 (ASO, user acquisition, community)
 
 **Total Team Size**: 15-18 people
 
 ### Timeline Summary
-- **Total Development Time**: 14-16 months (57+ weeks)
-  - Core Development: 12 months (Phases 1-17)
-  - Testing & Polish: 1 month (Phase 17)
-  - Launch Preparation: 1 month (Phase 18)
-  - Post-Launch Support: Ongoing (Phase 19+)
+- **Total Development Time**: 15-17 months (60+ weeks)
+  - Core Development: 13 months (Phases 1-18)
+  - Testing & Polish: 1 month (Phase 18)
+  - Launch Preparation: 1 month (Phase 19)
+  - Post-Launch Support: Ongoing (Phase 20+)
 
 ### Budget Estimates (Approximate)
 - **Development**: $300,000 - $500,000

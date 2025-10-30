@@ -12,7 +12,7 @@ This guide provides step-by-step instructions to begin implementing the BombBraw
 - **Visual Studio 2019/2022** or **Rider**
 - **Android Studio** (for SDK/NDK)
 - **Git** for version control
-- **Node.js** (optional, for custom backend)
+- **Python 3.8+** (optional, for custom backend server like BombSquad)
 
 ### Hardware Requirements
 - **Development PC**: Windows 10/11, macOS 10.15+, or Linux
